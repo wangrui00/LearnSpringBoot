@@ -1,5 +1,7 @@
 package com.bwtc.util;
 
+import com.bwtc.concurrent.Human;
+
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -16,8 +18,10 @@ import java.util.UUID;
 public class ClassUtils {
 
     public static void main(String[] args){
-        System.out.println(System.currentTimeMillis());
-        System.out.println(UUID.randomUUID().toString());
+        List<Class> classList=getAllClassByInterface(Human.class);
+        for (Class aClass : classList) {
+            System.out.println(aClass.getName());
+        }
     }
 
     //给一个接口,返回这个接口的所有实现类
@@ -57,6 +61,7 @@ public class ClassUtils {
         }
         ArrayList<Class> classes=new ArrayList<Class>();
         for(File directory:dirs){
+            System.out.println("directory is "+directory.getName().toString());
             classes.addAll(fileClasses(directory,packageName));
         }
         return classes;

@@ -1,6 +1,7 @@
 package com.bwtc.concurrent.producer;
 
 import java.awt.*;
+import java.util.UUID;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -15,7 +16,7 @@ public class MainClass {
 
     public static void main(String[] args) throws InterruptedException{
         //建立缓冲区
-        BlockingQueue<PCData> queue=new LinkedBlockingDeque<PCData>(10);
+        /*BlockingQueue<PCData> queue=new LinkedBlockingDeque<PCData>(10);
         Producer producer1=new Producer(queue);//建立生产者
         Producer producer2=new Producer(queue);
         Producer producer3=new Producer(queue);
@@ -36,6 +37,6 @@ public class MainClass {
         producer2.stop();
         producer3.stop();
         Thread.sleep(3000);
-        service.shutdown();
+        service.shutdown();*/
     }
 }
