@@ -15,7 +15,7 @@ import java.util.Map;
 public class SpringbootApplication {
 
     public static void main(String[] args){
-        ConfigurableApplicationContext context=SpringApplication.run(SpringbootApplication.class,args);
+        SpringApplication.run(SpringbootApplication.class,args);
        /* Map<String,Encodingconvertor> map=context.getBeansOfType(Encodingconvertor.class);
         System.out.println(map);*/
         //context.getBean(DataSourceProperties.class).show();
